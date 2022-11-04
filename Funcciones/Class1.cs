@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace ComponentDAccesaDades_Sprint9
+namespace Funcciones
 {
-    class Funcciones
+    class Funciones
     {
         //Variables universales
         SqlConnection conect;
@@ -22,7 +22,7 @@ namespace ComponentDAccesaDades_Sprint9
             conect = new SqlConnection(connectionString);
             conect.Open();
         }
-        
+
         public DataSet PortarTaula(string nombreTabla)
         {
             string query;
@@ -51,6 +51,11 @@ namespace ComponentDAccesaDades_Sprint9
 
             tablaTemporal.Fill(dts, nomTabla);
             return dts;
+        }
+
+        public void Actualizar(string consulta, DataSet data)
+        {
+
         }
 
     }
